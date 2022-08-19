@@ -83,7 +83,7 @@ let  prevmonth = document.querySelector('[date-prev]');
 	let date = new Date();
         let h = date.getHours().toString();
         let m = date.getMinutes().toString();
-        let s = date.getSeconds();
+        let s = date.getSeconds().toString();
             if (h.length<2) {
 	        h = '0' + h;
             }
