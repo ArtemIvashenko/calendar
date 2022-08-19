@@ -13,7 +13,7 @@ html {
   width: 100%;
   height: 100vh;
   background-color: grey;
-  color: white;
+  color: grey;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,4 +106,10 @@ html {
 
 .today {
   background-color: red;
+  color: black;
+font-weight: 200;
+   
+}
+.thismonth {
+  color: white;
 }
