@@ -28,6 +28,7 @@ let prevLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate();
 let monthDays = document.querySelector('.days');
 document.querySelector('.date h1').innerHTML = month[date.getMonth()];
 document.querySelector('.date p').innerHTML = date.toLocaleDateString();
+
 let days = '';
 let day = date.getDay()+1;
 let next = new Date(date.getFullYear(), date.getMonth()+1, 0).getDay();
@@ -78,6 +79,29 @@ let  prevmonth = document.querySelector('[date-prev]');
     calendar.calendarRun();
     });
 
+    function  clockcalendar() {
+	let date = new Date();
+        let h = date.getHours().toString();
+        let m = date.getMinutes().toString();
+        let s = date.getSeconds();
+            if (h.length<2) {
+	        h = '0' + h;
+            }
+            if (m.length<2) {
+	        m = '0' + m;
+            }
+            if (s.length<2) {
+                s = '0' + s;
+        }
+        let clockt = h + ':' + m + ':' + s;
+
+	document.querySelector('[ time]').innerHTML = clockt;
+
+      
+    }
+
+clockcalendar();
+setInterval(clockcalendar, 1000);
 
 
 
