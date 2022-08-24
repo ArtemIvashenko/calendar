@@ -15,15 +15,13 @@ class Calendar {
         document.querySelector('.date p').innerHTML = this.dateObject.toLocaleDateString();
 
         let days = '';
-        let day = this.dateObject.getDay() ;
-        day = day - 1;
+        let day = new Date (this.dateObject.getFullYear(), this.dateObject.getMonth(), 0).getDay();
         let next = new Date(this.dateObject.getFullYear(), this.dateObject.getMonth() + 1, 0).getDay();
         let lastDayMonth = 7 - next;
-            if (day <0) {
-                day= 6;
-            } 
+           
+		 
                 for (let i = day ; i > 0; i--) {
-                days +=` <div> ${prevLastDay - i + 1 } </div>`;
+                days +=` <div> ${prevLastDay - i + 1  } </div>`;
                 monthDays.innerHTML = days;
                 }
 
